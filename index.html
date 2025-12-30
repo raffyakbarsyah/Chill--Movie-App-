@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="/script.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="/script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body>
-  
+  <main class="login-background">
+    <section class="login-container">
+
+      <header class="login-title">
+        <img src="/images/login/movie-open.svg" alt="CHILL logo" />
+        <p>CHILL</p>
+      </header>
+
+      <section class="login-heading">
+        <h1>Masuk</h1>
+        <p>Selamat datang kembali!</p>
+      </section>
+
+      <section class="username-container">
+        <form class="username-form">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            class="username-id"
+            placeholder="Masukkan username"
+          />
+        </form>
+      </section>
+
+      <section class="password-container">
+        <form class="password-form">
+          <label for="password">Kata Sandi</label>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="password"
+              class="password-id"
+              placeholder="Masukkan kata sandi"
+            />
+            <img src="/images/login/Vector.svg" alt="icon" class="input-icon">
+          </div>
+
+          <div class="auth-links">
+            <p>Belum punya akun? <strong>Daftar</strong></p>
+            <p>Lupa kata sandi?</p>
+          </div>
+        </form>
+      </section>
+
+      <div class="form-actions">
+        <button type="submit" class="masuk-button">
+          Masuk
+        </button>
+
+        <p class="divider">Atau</p>
+
+        <button type="button" class="google-button">
+          <img src="/images/login/2991148 1.svg" alt="" aria-hidden="true">
+          Masuk dengan Google
+        </button>
+      </div>
+
+    </section>
+  </main>
 </body>
 </html>
