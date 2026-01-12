@@ -228,10 +228,11 @@ a {
 .navbar{
   display:flex;
   padding: 1rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
   gap: 80px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .navbar-menu{
@@ -263,4 +264,50 @@ a {
   font-weight: 400;
   font-style: normal;
   color: white;
+}
+
+@media (max-width: 450px) {
+  .navbar-title h1 {
+    display: none;
+  }
+}
+
+.profile-menu {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile-menu ul {
+  position: absolute;
+  top: calc(100% + 8px); /* spacing without hover gap */
+  right: 0;
+  margin: 0;            /* IMPORTANT */
+  list-style: none;
+  padding: 8px 0;
+  background-color: rgba(24, 26, 28, 1);
+  border-radius: 8px;
+  display: none;
+
+}
+
+.drop-btn {
+  cursor: pointer;
+  
+}
+
+.drop-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(87%)
+          saturate(5600%) hue-rotate(215deg);
+}
+
+
+#menu-toggle:checked ~ ul {
+  display: block;
+}
+
+.profile-menu ul li a:hover {
+  color: rgba(50, 84, 255, 1);
 }
