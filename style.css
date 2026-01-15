@@ -1,169 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Londrina+Solid:wght@100;300;400;900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-.londrina-solid-regular {
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 html,
 body {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
   background-color: rgba(24, 26, 28, 1);
 }
 
-.login-background {
-  min-height: 100vh;
-  width: 100%;
-  background-image: url("./images/login/login-background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+a {
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+/* LOGIN */
+
+.login-background {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: center / cover no-repeat url("./images/login/login-background.jpg");
 }
 
 .login-container {
-  background-color: rgba(24, 26, 28, 0.84);
   display: flex;
   flex-direction: column;
+  gap: 25px;
+  width: clamp(280px, 30vw, 100%);
   padding: 25px;
   border-radius: 16px;
-  gap: 25px;
-  height: auto;
-  width: clamp(280px, 30vw, 100%);
+  background-color: rgba(24, 26, 28, 0.84);
+}
+
+.login-title,
+.login-heading {
+  display: flex;
+  align-items: center;
 }
 
 .login-title {
-  display: flex;
-  gap: 5px;
-  align-items: center;
   justify-content: center;
-  padding-top: 0;
+  gap: 5px;
 }
 
 .login-title img {
-  height: clamp(2.5rem, 4.3vw + 1rem, 3.688rem);
   width: clamp(2.5rem, 4.3vw + 1rem, 3.688rem);
+  height: clamp(2.5rem, 4.3vw + 1rem, 3.688rem);
 }
 
 .login-title p {
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: clamp(2.5rem, 4.3vw + 1rem, 3.688rem);
-  color: white;
   margin: 0;
+  font-family: "Londrina Solid", sans-serif;
+  font-size: clamp(2.5rem, 4.3vw + 1rem, 3.688rem);
+  font-weight: 400;
+  color: #fff;
 }
 
 .login-heading {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2px;
 }
 
-.login-heading h1 {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: white;
+.login-heading h1,
+.login-heading p {
   margin: 0;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+.login-heading h1 {
   font-size: clamp(1.3rem, 1.5vw + 0.5rem, 3rem);
+  font-weight: 700;
 }
 
 .login-heading p {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  margin: 0;
   font-size: clamp(0.4rem, 0.5vw + 0.5rem, 1.25rem);
+  font-weight: 400;
 }
 
-.username-id {
-  border-radius: 24px;
-  border: solid 1px #E7E3FC3B;
-  background-color: rgba(24, 26, 28, 0.84);
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  padding: 8px;
-  width: auto;
-}
-
-.username-form {
+.username-form,
+.password-form {
   display: flex;
   flex-direction: column;
-  color: #ffffff;
   gap: 5px;
+  color: #fff;
 }
 
-.username-container label {
-  color: #ffffff;
+.username-container label,
+.password-container label {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  color: #fff;
 }
 
-.username-id::placeholder {
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+.username-id,
+.input-wrapper {
+  padding: 8px;
+  border: 1px solid #E7E3FC3B;
+  border-radius: 24px;
+  background-color: rgba(24, 26, 28, 0.84);
+  color: #fff;
 }
 
 .input-wrapper {
-  border-radius: 24px;
-  border: solid 1px #E7E3FC3B;
-  background-color: rgba(24, 26, 28, 0.84);
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  padding: 8px;
-  width: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .input-wrapper:focus-within {
-  border: 1px solid white;
+  border-color: #fff;
 }
 
 .password-id {
-  border: 0px solid black;
-  background-color: rgba(24, 26, 28, 0.84);
   width: 80%;
-  color: #ffffff;
-  height: auto;
+  border: none;
+  background-color: transparent;
+  color: #fff;
 }
 
 .password-id:focus {
   outline: none;
 }
 
-.password-form {
-  display: flex;
-  flex-direction: column;
-  color: #ffffff;
-  gap: 5px;
-}
-
-.password-container label {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
+.username-id::placeholder,
 .password-id::placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 500;
-  font-style: normal;
 }
 
 .auth-links {
@@ -172,94 +147,69 @@ body {
 }
 
 .auth-links p {
-  color: #ffffff;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.7rem;
-}
-
-a {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-style: normal;
-  font-size: 0.7rem;
-  text-decoration: none;
+  color: #fff;
 }
 
 .masuk-button,
 .google-button {
   width: 100%;
+  padding: 10px;
+  border-radius: 24px;
   font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .masuk-button {
-  background-color: #3D4142;
-  color: #ffffff;
   border: 1px solid rgba(231, 227, 252, 0.23);
-  border-radius: 24px;
-  padding: 10px;
+  background-color: #3D4142;
+  color: #fff;
 }
 
 .google-button {
-  background-color: rgba(231, 227, 252, 0);
-  border: 1px solid #E7E3FC3B;
-  border-radius: 24px;
-  padding: 10px;
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  border: 1px solid #E7E3FC3B;
+  background-color: transparent;
+  color: #fff;
 }
 
 .divider {
-  color: rgba(157, 158, 161, 1);
   text-align: center;
   font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-style: medium;
   font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(157, 158, 161, 1);
 }
+
+/* NAVBAR */
 
 .navbar {
   display: flex;
   align-items: center;
-
-  height: clamp(56px, 6.5vw, 94px);
-
-  padding: 
-    clamp(6px, 2vw, 25px)
-    clamp(20px, 5.5vw, 80px);
-
-  gap: clamp(12px, 5vw, 80px);
-
   justify-content: space-between;
+  height: clamp(56px, 6.5vw, 94px);
+  padding: 0 clamp(20px, 5.5vw, 80px);
+  gap: clamp(12px, 5vw, 80px);
 }
 
 .navbar-menu {
   display: flex;
   align-items: center;
-  height: clamp(56px, 6.5vw, 94px);
-  padding: clamp(6px, 2vw, 25px) clamp(20px, 5.5vw, 80px);
   gap: clamp(12px, 5vw, 80px);
 }
 
 .navbar-menu p {
-  color: #ffffff;
   font-family: "Lato", sans-serif;
+  font-size: clamp(10px, 0.74vw + 7.33px, 28px);
   font-weight: 500;
-  font-style: medium;
+  color: #fff;
   cursor: pointer;
-  font-size: clamp(
-    10px,
-    calc(10px + (8 * (100vw - 360px) / 1080)),
-    18px
-  );
 }
 
 .navbar-menu p:hover {
@@ -273,20 +223,15 @@ a {
 }
 
 .navbar-title img {
-  display: flex;
-  align-items: center;
-  gap: clamp(4px, 1vw, 8px);
-
-  width: clamp(20px, 2.5vw, 29.55px);
+  width: clamp(20px, 3.5vw, 37px);
   height: clamp(26px, 4vw, 44px);
 }
 
 .navbar-title h1 {
   font-family: "Londrina Solid", sans-serif;
+  font-size: clamp(20px, 3.5vw, 37px);
   font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: clamp(20px, 2.5vw, 29.55px);
+  color: #fff;
   line-height: 1;
 }
 
@@ -296,13 +241,15 @@ a {
   }
 }
 
+/* PROFILE MENU */
+
 .profile-menu {
+  position: relative;
   display: flex;
   align-items: center;
+  gap: clamp(4px, 1vw, 8px);
   width: clamp(40px, 5vw, 76px);
   height: clamp(20px, 2.8vw, 40px);
-  gap: clamp(4px, 1vw, 8px);
-  position: relative;
 }
 
 .profile-menu img {
@@ -314,66 +261,164 @@ a {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
+  display: none;
+  padding: 0;
   margin: 0;
   list-style: none;
-  padding: 8px 0;
-  background-color: rgba(24, 26, 28, 1);
   border-radius: 8px;
-  display: none;
+  background-color: rgba(24, 26, 28, 1);
+  width: fit-content;
 }
 
-.profile-menu a {
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-style: medium;
-  font-size: 0.7rem;
-  font-size: clamp(
-    10px,
-    calc(10px + (8 * (100vw - 360px) / 1080)),
-    18px
-);
+.profile-menu ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 9em;
+  padding: clamp(0.75rem, 2vw, 2rem) clamp(1rem, 3vw, 3rem);
+  flex-shrink: 0;
 }
-.profile-menu ul li a:hover {
+
+.profile-menu ul li a {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(10px, calc(10px + (8 * (100vw - 360px) / 1080)), 18px);
+  font-weight: 500;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.profile-menu ul li img {
+  width: 1em;
+  height: 1em;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.profile-menu ul li:hover a {
   color: rgba(50, 84, 255, 1);
 }
 
+.profile-menu ul li:hover img {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(87%) saturate(5600%) hue-rotate(215deg);
+}
+
 .drop-btn {
-  cursor: pointer;
-  width: clamp(16px, 1.9vw, 28px);
-  height: clamp(16px, 1.9vw, 28px);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: clamp(16px, 1.9vw, 28px);
+  height: clamp(16px, 1.9vw, 28px);
+  cursor: pointer;
 }
 
 .drop-btn:hover img {
-  filter: brightness(0) saturate(100%) invert(42%) sepia(87%)
-    saturate(5600%) hue-rotate(215deg);
+  filter: brightness(0) saturate(100%) invert(42%) sepia(87%) saturate(5600%) hue-rotate(215deg);
 }
 
 #menu-toggle:checked ~ ul {
   display: block;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
+/* HERO */
 
 .hero {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   width: 100%;
   height: calc(225px + (362 * ((100vw - 360px) / 1080)));
-  
-  background-image:
-    url("/images/login/Rectangle 9.svg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: center / cover no-repeat url("/images/login/Rectangle 9.svg");
 }
 
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 85ch;
+  padding: 0 2em;
+}
 
+.hero-description h1 {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(22px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+}
 
+.hero-description p {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(10px, 1.25vw, 18px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
 
+@media (max-width: 480px) {
+  .hero-description p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.hero-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5em, 2.5vw, 2em);
+}
+
+.hero-menu a {
+  padding: 0.5em 1.5em;
+  border-radius: 48px;
+  font-size: clamp(10px, 1.25vw, 18px);
+}
+
+.mulai {
+  background-color: rgba(15, 30, 147, 1);
+}
+
+.selengkapnya {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: rgba(34, 40, 42, 1);
+}
+
+.selengkapnya img {
+  width: clamp(10px, 1.25vw, 18px);
+  height: clamp(10px, 1.25vw, 18px);
+}
+
+.hero-menu p {
+  padding: 0.5em;
+  border: 1px solid rgba(193, 194, 196, 1);
+  border-radius: 24px;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(10px, 1.25vw, 18px);
+  font-weight: 400;
+  color: rgba(193, 194, 196, 1);
+}
+
+.hero-sound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.3em, 1vw, 0.8em);
+  border: 1px solid rgba(193, 194, 196, 1);
+  border-radius: 50%;
+}
+
+.hero-sound img {
+  width: clamp(10px, 1.25vw, 18px);
+  height: clamp(10px, 1.25vw, 18px);
+}
